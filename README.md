@@ -45,7 +45,7 @@ upstream  https://github.com/beniza/mlym-mozhi.git (push)
   C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git branch issue-#
   C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git checkout issue-#
  ```
-  > `issue-#`, replace # with the issue number you are trying to fix.
+  > In `issue-#` replace # with the issue number you are trying to fix.
 
 Now you are ready to make changes to the project. Open the Keyboard file using Keyman Developer. Add necessary changes to the code or documentation. The next step is to check in the changes you have made. Git will keep the track of the changes you are making to the project. By using the following commands, you can let git know that you have finished working on something, and also why you made that change. 
 ```shell
@@ -53,5 +53,35 @@ Now you are ready to make changes to the project. Open the Keyboard file using K
   C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git add <filename> # <filename> specifies the name of the file you have edited.
   C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git commit -m "A brief message answering the question, why you made this change" # <filename> specifies the name of the file you have edited.
 ```
-> If you have changed the code, make sure that you test it thoroughly.
+> If you have changed the code, make sure that you test it thoroughly. Refer to the section explaining the [testing of a Keyman Keyboard](https://help.keyman.com/developer/9.0/guides/test/how-to-test-your-keyboard-layout-with-keyman-developer-9-touch-and-desktop) to learn how to test your Keyboard.
 
+  - Once you are satisfied with the changes made, check in your changes. This is done in several steps. 
+  
+    - Save your work
+    - Open or switch to your `terminal window`
+    - List the files got changed in during the editing process
+    
+```shell
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git status
+```
+> This step can help you remind about the changes you've made during your editing process.
+
+    - `commit` your changes
+```shell
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git commit -a
+```
+> This will open up a new window, where you can give a commit message describing the changes you have made. Depending on the type of change you are making, this commit message can be a single line summary of the change or a very detailed explanation. For any major updates, we recommend that you include a good commit message that answer three questions about your patch:
+
+> **Why is it necessary?** It may fix a bug, it may add a feature, it may improve performance, reliabilty, stability, or just be a change for the sake of correctness.
+
+> **How does it address the issue?** For short obvious patches this part can be omitted, but it should be a high level description of what the approach was.
+
+> **What effects does the patch have?** (In addition to the obvious ones, this may include benchmarks, side effects, etc.)
+[Read more on Commit messages](http://who-t.blogspot.in/2009/12/on-commit-messages.html)
+
+    - Update your `master` branch
+    
+    - `push` your commit to the remote `origin`
+    - Create a `pull request` to the `upstream`
+    
+> Once we receive a pull request, one of us will review the changes and all the relevant changes will be integrated into the project.
