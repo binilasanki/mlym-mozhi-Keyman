@@ -18,6 +18,6 @@ Here is an overview of the workflow
 ![Open Command Window](_images/cmd.png "How to open a command line window on Windows")
 
 ```shell
-     C:\Users\ben\Documents\Work\Mozhi> git clone https://github.com/beniza/mlym-mozhi-Keyman.git
-     ```
-  - 
+C:\Users\ben\Documents\Work\Mozhi> git clone https://github.com/beniza/mlym-mozhi-Keyman.git
+```
+ 
