@@ -18,23 +18,40 @@ Here is an overview of the workflow
 ![Open Command Window](./_img/cmd.png "How to open a command line window on Windows")
 
 ```shell
-C:\Users\ben\Documents\Work\Mozhi> git clone https://github.com/beniza/mlym-mozhi-Keyman.git
+C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git clone https://github.com/<your github account name>/mlym-mozhi-Keyman.git
 ```
-  - Note: You can alternatively use [Git for Windows, "mingw"](https://git-for-windows.github.io/) if you are familiar with a linux like terminal.
+> Note: You can alternatively use [Git for Windows, "mingw"](https://git-for-windows.github.io/) if you are more familiar with a linux like terminal.
+
+  - The Forking workflow requires two remotes (links to the public server repo). One to your own repo, which is already created when you cloned your personal public repo to your local system in the previous step. This remote is normally called the `origin`. Make a new remote `upstream` which will allow you to stay updated with the `official repo`. 
+  
+```shell
+C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git remote add upstream https://github.com/beniza/mlym-mozhi-Keyman.git
+```
+> Now, go ahead and list the remotes to see if everything looks good!
+
+```shell
+C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git remote -v
+
+origin  https://github.com/<your github account name>/mlym-mozhi.git (fetch)
+origin  https://github.com/<your github account name>/mlym-mozhi.git (push)
+upstream  https://github.com/beniza/mlym-mozhi.git (fetch)
+upstream  https://github.com/beniza/mlym-mozhi.git (push)
+
+```
   - Decide on an issue you wanted to contribute.
     - Please see the Issues page of this repo to see the pending issues. Please make an issue on the repo, if you haven't find the issue you are planning to contribute.
   - Create a new branch
   ```shell
-  C:\Users\ben\Documents\Work\Mozhi> git branch issue-#
-  C:\Users\ben\Documents\Work\Mozhi> git checkout issue-#
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git branch issue-#
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git checkout issue-#
  ```
   > `issue-#`, replace # with the issue number you are trying to fix.
 
 Now you are ready to make changes to the project. Open the Keyboard file using Keyman Developer. Add necessary changes to the code or documentation. The next step is to check in the changes you have made. Git will keep the track of the changes you are making to the project. By using the following commands, you can let git know that you have finished working on something, and also why you made that change. 
 ```shell
-  C:\Users\ben\Documents\Work\Mozhi> git status # This will list all the files you have made changes.
-  C:\Users\ben\Documents\Work\Mozhi> git add <filename> # <filename> specifies the name of the file you have edited.
-  C:\Users\ben\Documents\Work\Mozhi> git commit -m "A brief message answering the question, why you made this change" # <filename> specifies the name of the file you have edited.
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git status # This will list all the files you have made changes.
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git add <filename> # <filename> specifies the name of the file you have edited.
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git commit -m "A brief message answering the question, why you made this change" # <filename> specifies the name of the file you have edited.
 ```
 > If you have changed the code, make sure that you test it thoroughly.
 
