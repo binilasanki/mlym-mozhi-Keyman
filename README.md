@@ -13,11 +13,11 @@ We will use the [Git Forking Workflow](https://www.atlassian.com/git/tutorials/c
 
 Here is an overview of the workflow
   - Fork this repository.
-  - Clone your copy into a convenient location on your computer. (If you haven't already installed a git client
-     ```terminal
-     Drive Letter:\your\work\folder>
-     
-     > Example
+  - Clone your copy into a convenient location on your computer. (If you haven't already installed a git client download and install one. Once you have a git client installed, open a Command Window (Right click on your folder while holding down the `Shift` key, and select the option, `Open Command Window Here`.
+  
+![Open Command Window](_images/cmd.png "How to open a command line window on Windows")
+
+```shell
      C:\Users\ben\Documents\Work\Mozhi> git clone https://github.com/beniza/mlym-mozhi-Keyman.git
      ```
   - 
