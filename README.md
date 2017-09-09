@@ -10,3 +10,14 @@ You are welcomed to collaborate in this project. The Keyman keybaord development
 
 ### Setting up your system for collaboration
 We will use the [Git Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for this project. Take a moment to read through this link and learn the workflow and philosophy. If you are new you git and version controlling system, you may want to take the interactive training offered on the [Atlasian Website](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud).
+
+Here is an overview of the workflow
+  - Fork this repository.
+  - Clone your copy into a convenient location on your computer. (If you haven't already installed a git client
+     ```git
+     Drive Letter:\your\work\folder>
+     
+     > Example
+     C:\Users\ben\Documents\Work\Mozhi> git clone https://github.com/beniza/mlym-mozhi-Keyman.git
+     ```
+  - 
