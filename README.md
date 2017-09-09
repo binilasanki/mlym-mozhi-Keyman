@@ -26,5 +26,15 @@ C:\Users\ben\Documents\Work\Mozhi> git clone https://github.com/beniza/mlym-mozh
   - Create a new branch
   ```shell
   C:\Users\ben\Documents\Work\Mozhi> git branch issue-#
+  C:\Users\ben\Documents\Work\Mozhi> git checkout issue-#
  ```
-  - `issue-#`, replace # with the issue number you are trying to fix.
+  > `issue-#`, replace # with the issue number you are trying to fix.
+
+Now you are ready to make changes to the project. Open the Keyboard file using Keyman Developer. Add necessary changes to the code or documentation. The next step is to check in the changes you have made. Git will keep the track of the changes you are making to the project. By using the following commands, you can let git know that you have finished working on something, and also why you made that change. 
+```shell
+  C:\Users\ben\Documents\Work\Mozhi> git status # This will list all the files you have made changes.
+  C:\Users\ben\Documents\Work\Mozhi> git add <filename> # <filename> specifies the name of the file you have edited.
+  C:\Users\ben\Documents\Work\Mozhi> git commit -m "A brief message answering the question, why you made this change" # <filename> specifies the name of the file you have edited.
+```
+> If you have changed the code, make sure that you test it thoroughly.
+
