@@ -9,7 +9,9 @@ This project implements the Mozhi layout in [Keyman 9](https://keyman.com/), the
 You are welcomed to collaborate in this project. The Keyman keybaord development is not a big task. So even if you are not a developer, you can still contribute to this project. To participate in this project you'll need the Keyman Developer application, which can be downloaded from [here](https://keyman.com/developer/). Once you download and install Keyman desktop on your computer, visit the [Developer Support page](https://help.keyman.com/developer/9.0/guides/) and [Keyman Keyboard Languge page](https://help.keyman.com/developer/language/) to learn more about how to write Keyman Keybaords.
 
 ### Setting up your system for collaboration
-We will use the [Git Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for this project. Take a moment to read through this link and learn the workflow and philosophy. If you are new you git and version controlling system, you may want to take the interactive training offered on the [Atlasian Website](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud).
+This project is an open source project. That means you are invited to participate in the development of this project. You don't have to be a programmer to participate in this project. If you are excited about this project, you can contribute to this project by [reporting issues], [improving the documentation] or [share about this project].
+
+In this project we will use Git as our Version Control Software. Since you are reading this, you might already know that this project is hosted on GitHub. You should also [install a Git client](https://services.github.com/on-demand/windows/) software on your local machine. We will use the [Git Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for this project. Take a moment to read through this link and learn the workflow and philosophy. If you are new you git and version controlling system, you may want to take the interactive training offered on the [Atlasian Website](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud).
 
 Here is an overview of the workflow
   - Fork this repository.
@@ -53,7 +55,7 @@ Now you are ready to make changes to the project. Open the Keyboard file using K
   C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git add <filename> # <filename> specifies the name of the file you have edited.
   C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git commit -m "A brief message answering the question, why you made this change" # <filename> specifies the name of the file you have edited.
 ```
-> If you have changed the code, make sure that you test it thoroughly. Refer to the section explaining the [testing of a Keyman Keyboard](https://help.keyman.com/developer/9.0/guides/test/how-to-test-your-keyboard-layout-with-keyman-developer-9-touch-and-desktop) to learn how to test your Keyboard.
+> If you have changed the code, make sure that you test it thoroughly. Refer to the section explaining the [testing a Keyman Keyboard](https://help.keyman.com/developer/9.0/guides/test/how-to-test-your-keyboard-layout-with-keyman-developer-9-touch-and-desktop) to learn how to test your Keyboard.
 
   - Once you are satisfied with the changes made, check in your changes. This is done in several steps. 
   
@@ -83,10 +85,19 @@ Now you are ready to make changes to the project. Open the Keyboard file using K
   - Update your `master` branch
   
   #TODO
-    
+     
+```shell
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git checkout master
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git pull upstream master
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git merge `issue-#`
+```
+> Occassionally you will get a `merge conflict` at this point. 
+
   - `push` your commit to the remote `origin`
+  
   #TODO
   - Create a `pull request` to the `upstream`
+  
   #TODO
     
 Once we receive a pull request, one of us will review the changes and all the relevant changes will be integrated into the project.
