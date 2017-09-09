@@ -14,7 +14,7 @@ We will use the [Git Forking Workflow](https://www.atlassian.com/git/tutorials/c
 Here is an overview of the workflow
   - Fork this repository.
   - Clone your copy into a convenient location on your computer. (If you haven't already installed a git client
-     ```git
+     ```terminal
      Drive Letter:\your\work\folder>
      
      > Example
