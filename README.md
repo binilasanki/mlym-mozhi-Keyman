@@ -66,7 +66,8 @@ Now you are ready to make changes to the project. Open the Keyboard file using K
 ```
 > This step can help you remind about the changes you've made during your editing process.
 
-    - `commit` your changes
+  - `commit` your changes
+    
 ```shell
   C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git commit -a
 ```
@@ -79,9 +80,9 @@ Now you are ready to make changes to the project. Open the Keyboard file using K
 > **What effects does the patch have?** (In addition to the obvious ones, this may include benchmarks, side effects, etc.)
 [Read more on Commit messages](http://who-t.blogspot.in/2009/12/on-commit-messages.html)
 
-    - Update your `master` branch
+  - Update your `master` branch
     
-    - `push` your commit to the remote `origin`
-    - Create a `pull request` to the `upstream`
+  - `push` your commit to the remote `origin`
+  - Create a `pull request` to the `upstream`
     
-> Once we receive a pull request, one of us will review the changes and all the relevant changes will be integrated into the project.
+Once we receive a pull request, one of us will review the changes and all the relevant changes will be integrated into the project.
