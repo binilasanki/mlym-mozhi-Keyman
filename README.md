@@ -81,8 +81,12 @@ Now you are ready to make changes to the project. Open the Keyboard file using K
 [Read more on Commit messages](http://who-t.blogspot.in/2009/12/on-commit-messages.html)
 
   - Update your `master` branch
+  
+  #TODO
     
   - `push` your commit to the remote `origin`
+  #TODO
   - Create a `pull request` to the `upstream`
+  #TODO
     
 Once we receive a pull request, one of us will review the changes and all the relevant changes will be integrated into the project.
