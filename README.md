@@ -20,4 +20,11 @@ Here is an overview of the workflow
 ```shell
 C:\Users\ben\Documents\Work\Mozhi> git clone https://github.com/beniza/mlym-mozhi-Keyman.git
 ```
- 
+    - Note: You can alternatively use [Git for Windows, "mingw"](https://git-for-windows.github.io/) if you are familiar with a linux like terminal.
+  - Decide on an issue you wanted to contribute.
+    - Please see the Issues page of this repo to see the pending issues. Please make an issue on the repo, if you haven't find the issue you are planning to contribute.
+  - Create a new branch
+  ```shell
+  C:\Users\ben\Documents\Work\Mozhi> git branch issue-#
+ ```
+    - `issue-#`, replace # with the issue number you are trying to fix.
