@@ -154,4 +154,4 @@ C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git branch -
 
 That's it. You've made a contribution to the project.
 
-Please visit the [wiki](#/wiki) page for more info.
+Please visit the [wiki](https://github.com/beniza/mlym-mozhi-Keyman/wiki) page for more info.
