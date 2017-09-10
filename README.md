@@ -46,7 +46,13 @@ upstream  https://github.com/beniza/mlym-mozhi.git (push)
   ```shell
   C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git branch issue-#
   C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git checkout issue-#
- ```
+  ```
+  
+>  Alternatively, you can combine these two steps in one command
+
+  ```shell
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git checkout -b issue-#
+  ```
   > In `issue-#` replace # with the issue number you are trying to fix.
 
 Now you are ready to make changes to the project. Open the Keyboard file using Keyman Developer. Add necessary changes to the code or documentation. The next step is to check in the changes you have made. Git will keep the track of the changes you are making to the project. By using the following commands, you can let git know that you have finished working on something, and also why you made that change. 
