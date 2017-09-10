@@ -97,13 +97,23 @@ Now you are ready to make changes to the project. Open the Keyboard file using K
   C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git pull upstream master
   C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git merge `issue-#`
 ```
-> Occassionally you will get a `merge conflict` at this point. 
+> Occassionally you will get a `merge conflict` at this point. You will have to manually fix any conflicts, before you'll be able to submit a change to the server.
 
   - `push` your commit to the remote `origin`
   
   #TODO
+     
+```shell
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git push origin master
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git merge `issue-#`
+```
+  
   - Create a `pull request` to the `upstream`
   
   #TODO
-    
+
+```shell
+C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git push origin master
+```
+
 Once we receive a pull request, one of us will review the changes and all the relevant changes will be integrated into the project.
