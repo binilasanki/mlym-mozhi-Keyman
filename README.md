@@ -149,7 +149,7 @@ C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git branch -
   And finally update your master branch
   
 ```shell
-  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git rebase --continue
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git pull --rebase upstream master
 ```
 
 That's it. You've made a contribution to the project.
