@@ -91,7 +91,7 @@ Now you are ready to make changes to the project. Open the Keyboard file using K
   - Update your branch with the changes from the official repo.
   There are several ways you can get your local repo synced with the official repo. Before you send the changes made by you to the server, you should always update your repo with the latest changes on the brach you are working on. In this workflow we will use the rebasing strategy for updating our local repo.
 
-  Make sure that you are on your `ssue branch` first
+  Make sure that you are on your `issue branch` first
      
 ```shell
   C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git checkout issue-#
