@@ -1,8 +1,8 @@
-# What is your proposal
+> What is the expected behavior
 
 
-# Why do you think it is important?
+> What is the actual behavior?
 
 
-# Do you have a suggestion on how to solve this issue?
+> Steps to reproduce the issue?
 
