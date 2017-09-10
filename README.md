@@ -88,32 +88,70 @@ Now you are ready to make changes to the project. Open the Keyboard file using K
 > **What effects does the patch have?** (In addition to the obvious ones, this may include benchmarks, side effects, etc.)
 [Read more on Commit messages](http://who-t.blogspot.in/2009/12/on-commit-messages.html)
 
-  - Update your `master` branch
-  
-  #TODO
+  - Update your branch with the changes from the official repo.
+  There are several ways you can get your local repo synced with the official repo. Before you send the changes made by you to the server, you should always update your repo with the latest changes on the brach you are working on. In this workflow we will use the rebasing strategy for updating our local repo.
+
+  Make sure that you are on your `ssue branch` first
      
 ```shell
-  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git checkout master
-  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git pull upstream master
-  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git merge `issue-#`
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git checkout issue-#
+```
+
+  - rebase the branch you're on onto whatever is on the upstream's master branch (the changes other team members have made since the last time you did this):
+
+```shell
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git pull --rebase upstream master
 ```
 > Occassionally you will get a `merge conflict` at this point. You will have to manually fix any conflicts, before you'll be able to submit a change to the server.
 
+  - Resolve any conflicts
+  When you follow the rebasing strategy to maintain the project, Git will update your local branch one commit from the server at a time. As soon as it finds a conflict, it pauses the operation and allow you to fix it. Open the file and resolve the conflicts (Git will highlight the places where the conflict occur by adding `>>>`. Review the code on your side and the code coming from the server carefully and decide how you want to resolve it by accepting the changes from the server or overwriting it with your code.
+
+> Remember that the code coming from the server is reviewed by the project maintainers and if you choose to replace it with your changes, you may have to prove to the reviewing team, why should they accept your code. In any case, expect to have a discussion around this change with the project maintainers/reviewers.
+
+  Once you finish editing the file, you can continue the rebase operation by 
+  
+```shell
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git add <filename>
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git rebase --continue
+```
+  Continue this operation until all the conflicts have been resolved.
+  
   - `push` your commit to the remote `origin`
   
-  #TODO
      
 ```shell
-  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git push origin master
-  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git merge `issue-#`
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git push origin issue-#
+```
+
+  One of the side effect of rebasing is it actually recreates new versions of each commit you've made on top of your team member's commits. So during a push operation, Git will not recognize your changes as the same as what is already on the origin repo. Therefore it will think your origin is ahead of local, and ask you to pull before pushing. If this happens, you can force Git to overwrite your origin repo with you have locally
+     
+```shell
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git push -f origin issue-#
 ```
   
   - Create a `pull request` to the `upstream`
   
-  #TODO
+  At this point you can visit your repository on github using a browser, and you are ready to make a pull request to the original repository. Click on the `New pull request` button on the page. Choose your `issue-#` branch and submit a pull request. Once we receive a pull request, one of us will review the changes and all the relevant changes will be integrated into the project.
+  
+  - Final step, delete the local branch and update master
+  
+  Once the project maintainer accept your pull request, you can safely delete your local branch and update the master branch with from the upstream. Before you do this, make sure that you switched to your master branch.
 
 ```shell
-C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git push origin master
+C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git checkout master
+```
+  To delete the `issue-#` branch, 
+
+```shell
+C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git branch -d issue-#
+```
+  And finally update your master branch
+  
+```shell
+  C:\Users\<your windows user name>\Documents\Work\mlym-mozhi-Keyman> git rebase --continue
 ```
 
-Once we receive a pull request, one of us will review the changes and all the relevant changes will be integrated into the project.
+That's it. You've made a contribution to the project.
+
+Please visit the [wiki](#/wiki) page for more info.
