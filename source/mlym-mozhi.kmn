@@ -1,0 +1,26 @@
+﻿store(&VERSION) '9.0'
+store(&TARGETS) 'any windows macosx linux web iphone ipad androidphone androidtablet mobile desktop tablet'
+store(&NAME) 'Malayalam Mozhi Keyboard'
+store(&ETHNOLOGUECODE) 'mal'
+store(&WINDOWSLANGUAGES) 'x044C'
+begin Unicode > use(main)
+
+
+group(main) using keys                            
+
+store(vowelsKeyStrokes) 'aAiIuUReEoOmH'
+store(vowelsMlym)       'അആഇഈഉഊഋഎഏഒഓംഃ'
+c store(vowelMatrasMlym) 'ഽാിീുൂൃെേൊോംഃ'
+
++ any(vowelsKeyStrokes) > index(vowelsMlym, 1)
+'അ' + 'i' > 'ഐ'
+'അ' + 'u' > 'ഔ'
+
++ 'k' > 'ക്'
++ 'g' > 
++ 'j' >
++ 'T' >
++ 'D' > 
++ 'N' >
++ 'n' >
+

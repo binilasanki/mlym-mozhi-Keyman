@@ -1,0 +1,1 @@
+KeymanWeb.KRS(new Stub_Keyboard_mlym_mozhi()); function Stub_Keyboard_mlym_mozhi() {this.KF="mlym_mozhi-1.0.js";this.KI="Keyboard_mlym_mozhi";this.KN="Malayalam Mozhi Keyboard";}
