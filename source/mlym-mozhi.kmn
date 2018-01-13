@@ -12,15 +12,20 @@ store(vowelsKeyStrokes) 'aAiIuUReEoOmH'
 store(vowelsMlym)       'അആഇഈഉഊഋഎഏഒഓംഃ'
 c store(vowelMatrasMlym) 'ഽാിീുൂൃെേൊോംഃ'
 
-+ any(vowelsKeyStrokes) > index(vowelsMlym, 1)
+store(simpleConsKeyStrokes) 'kgjTdDpbyvzsh'
+store(simpleConsMlym) 'കഗജടദഡപബയവശസഹ'    
+
+store(chilluKeyStrokes) 'NnrlLc'
+store(chilluMlym) 'ൺൻർൽൾൿ'
+store(chilluBase) 'ണനരലളക'
+
 'അ' + 'i' > 'ഐ'
 'അ' + 'u' > 'ഔ'
 
-+ 'k' > 'ക്'
-+ 'g' > 
-+ 'j' >
-+ 'T' >
-+ 'D' > 
-+ 'N' >
-+ 'n' >
++ any(simpleConsKeyStrokes) > index(simpleConsMlym, 1) "്"
++ any(chilluKeyStrokes) > index(chilluMlym, 1)
+
+any(simpleConsMlym) '്' + 'a' > index(simpleConsMlym, 1)
+any(chilluMlym) + 'a' > index(chilluBase, 1)
++ any(vowelsKeyStrokes) > index(vowelsMlym, 1)  
 
