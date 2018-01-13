@@ -1,4 +1,4 @@
-# Malayalam Mozhi Keyman Keybaord
+# Malayalam Mozhi Keyman Keyboard
 ## mlym-mozhi-Keyman
 Mozhi is one of most popular phonetic keyboarding scheme for Malayalam script. It was originally designed by Cibu for the Varamozhi project and he still maintains the [Mozhi specification](https://sites.google.com/site/cibu/mozhi/mozhi2).
 
