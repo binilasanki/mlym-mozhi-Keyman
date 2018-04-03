@@ -15,17 +15,27 @@ c store(vowelMatrasMlym) 'ഽാിീുൂൃെേൊോംഃ'
 store(simpleConsKeyStrokes) 'kgjTdDpbyvzsh'
 store(simpleConsMlym) 'കഗജടദഡപബയവശസഹ'    
 
+store(unAspiratedConsMlym) 'കഗചജടദഡപബ'
+store(aspiratedConsMlym) 'ഖഘഛഝഠധഢഫഭ' 
+
 store(chilluKeyStrokes) 'NnrlLc'
 store(chilluMlym) 'ൺൻർൽൾൿ'
 store(chilluBase) 'ണനരലളക'
-
+c store(irregularBase) '
+'അ' + 'a' > 'ആ'
 'അ' + 'i' > 'ഐ'
 'അ' + 'u' > 'ഔ'
 
 + any(simpleConsKeyStrokes) > index(simpleConsMlym, 1) "്"
 + any(chilluKeyStrokes) > index(chilluMlym, 1)
 
-any(simpleConsMlym) '്' + 'a' > index(simpleConsMlym, 1)
 any(chilluMlym) + 'a' > index(chilluBase, 1)
 + any(vowelsKeyStrokes) > index(vowelsMlym, 1)  
 
+'ൻ' + 'g' > 'ങ്'
+'ൿ' + 'h' > 'ച്'
+c 'a' will remove the 'chandrakkala' from the base consonant
+'്' + 'a' > nul
+
+c unaspirated to aspirated
+any(unAspiratedConsMlym) '്' + 'h' > index(aspiratedConsMlym, 1) "്"
