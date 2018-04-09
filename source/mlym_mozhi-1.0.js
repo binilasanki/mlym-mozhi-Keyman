@@ -26,6 +26,14 @@ function Keyboard_mlym_mozhi()
       r=m=1;
       k.KO(1,t,"×");
     }
+    else if(k.KKM(e,16384,189)&&k.KCM(1,t,"\\",1)) {   // Line 46
+      r=m=1;
+      k.KO(1,t,"−");
+    }
+    else if(k.KKM(e,16384,191)&&k.KCM(1,t,"\\",1)) {   // Line 45
+      r=m=1;
+      k.KO(1,t,"÷");
+    }
     else if(k.KKM(e,16400,65)) {   // Line 33
       r=m=1;
       k.KO(0,t,"ആ");

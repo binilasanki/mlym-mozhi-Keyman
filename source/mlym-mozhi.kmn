@@ -40,6 +40,11 @@ c 'a' will remove the 'chandrakkala' from the base consonant
 c unaspirated to aspirated
 any(unAspiratedConsMlym) '്' + 'h' > index(aspiratedConsMlym, 1) "്"  
  
-c multiplication symbol
-'\' + '*' > '×'
+c mathematical symbols
+'\' + '*' > '×'   
+'\' + '/' > '÷' 
+'\' + '-' > '−' 
+
+
+
 
