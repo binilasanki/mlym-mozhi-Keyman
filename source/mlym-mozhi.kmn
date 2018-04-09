@@ -49,6 +49,9 @@ c malayalam avagraha
 '/' + '/' > 'ഽ' 
 'ഽ' + '/' > '//'
 
+c add dot reph
+'ർ' + '#' > 'ൎ'
+
 
 
 
