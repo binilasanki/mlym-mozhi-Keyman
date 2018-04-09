@@ -22,7 +22,11 @@ function Keyboard_mlym_mozhi()
   };
   this.g_main=function(t,e) {
     var k=KeymanWeb,r=0,m=0;
-    if(k.KKM(e,16400,65)) {   // Line 33
+    if(k.KKM(e,16400,56)&&k.KCM(1,t,"\\",1)) {   // Line 44
+      r=m=1;
+      k.KO(1,t,"×");
+    }
+    else if(k.KKM(e,16400,65)) {   // Line 33
       r=m=1;
       k.KO(0,t,"ആ");
     }
