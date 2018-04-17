@@ -52,21 +52,24 @@ c mathematical symbols
 
 c malayalam avagraha
 '/' + '/' > 'ഽ' 
-'ഽ' + '/' > '//'
+'ഽ' + '/' > '//' 
+'//' + '/' > '/'
 
 c add dot reph
-'ർ' + '#' > 'ൎ'  
+'ർ' + '#' > 'ൎ' 
 
 c open & closed double quotes
     + '"' > '“'
 '“' + '"' >'”'
-'”' + '"' >'"'
+'”' + '"' >'"' 
+'"' + '"' >'“'
 
 c hyphen
 '−' + '\' > '-'   
 
 c asterisk
-'×' + '\' > '*'
+'×' + '\' > '*' 
+
 
 
 

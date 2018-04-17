@@ -22,19 +22,23 @@ function Keyboard_mlym_mozhi()
   };
   this.g_main=function(t,e) {
     var k=KeymanWeb,r=0,m=0;
-    if(k.KKM(e,16400,222)&&k.KCM(1,t,"“",1)) {   // Line 62
+    if(k.KKM(e,16400,222)&&k.KCM(1,t,"“",1)) {   // Line 63
       r=m=1;
       k.KO(1,t,"”");
     }
-    else if(k.KKM(e,16400,222)&&k.KCM(1,t,"”",1)) {   // Line 63
+    else if(k.KKM(e,16400,222)&&k.KCM(1,t,"”",1)) {   // Line 64
       r=m=1;
       k.KO(1,t,"\"");
     }
-    else if(k.KKM(e,16400,222)) {   // Line 61
+    else if(k.KKM(e,16400,222)&&k.KCM(1,t,"\"",1)) {   // Line 65
+      r=m=1;
+      k.KO(1,t,"“");
+    }
+    else if(k.KKM(e,16400,222)) {   // Line 62
       r=m=1;
       k.KO(0,t,"“");
     }
-    else if(k.KKM(e,16400,51)&&k.KCM(1,t,"ർ",1)) {   // Line 58
+    else if(k.KKM(e,16400,51)&&k.KCM(1,t,"ർ",1)) {   // Line 59
       r=m=1;
       k.KO(1,t,"ൎ");
     }
@@ -45,6 +49,10 @@ function Keyboard_mlym_mozhi()
     else if(k.KKM(e,16384,189)&&k.KCM(1,t,"\\",1)) {   // Line 51
       r=m=1;
       k.KO(1,t,"−");
+    }
+    else if(k.KKM(e,16384,191)&&k.KCM(2,t,"//",2)) {   // Line 56
+      r=m=1;
+      k.KO(2,t,"/");
     }
     else if(k.KKM(e,16384,191)&&k.KCM(1,t,"\\",1)) {   // Line 50
       r=m=1;
@@ -102,11 +110,11 @@ function Keyboard_mlym_mozhi()
       r=m=1;
       k.KO(0,t,"ഊ");
     }
-    else if(k.KKM(e,16384,220)&&k.KCM(1,t,"−",1)) {   // Line 66
+    else if(k.KKM(e,16384,220)&&k.KCM(1,t,"−",1)) {   // Line 68
       r=m=1;
       k.KO(1,t,"-");
     }
-    else if(k.KKM(e,16384,220)&&k.KCM(1,t,"×",1)) {   // Line 69
+    else if(k.KKM(e,16384,220)&&k.KCM(1,t,"×",1)) {   // Line 71
       r=m=1;
       k.KO(1,t,"*");
     }
