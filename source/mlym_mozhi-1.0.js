@@ -22,15 +22,15 @@ function Keyboard_mlym_mozhi()
   };
   this.g_main=function(t,e) {
     var k=KeymanWeb,r=0,m=0;
-    if(k.KKM(e,16400,222)&&k.KCM(1,t,"“",1)) {   // Line 61
+    if(k.KKM(e,16400,222)&&k.KCM(1,t,"“",1)) {   // Line 62
       r=m=1;
       k.KO(1,t,"”");
     }
-    else if(k.KKM(e,16400,222)&&k.KCM(1,t,"”",1)) {   // Line 62
+    else if(k.KKM(e,16400,222)&&k.KCM(1,t,"”",1)) {   // Line 63
       r=m=1;
       k.KO(1,t,"\"");
     }
-    else if(k.KKM(e,16400,222)) {   // Line 60
+    else if(k.KKM(e,16400,222)) {   // Line 61
       r=m=1;
       k.KO(0,t,"“");
     }
@@ -101,6 +101,10 @@ function Keyboard_mlym_mozhi()
     else if(k.KKM(e,16400,85)) {   // Line 33
       r=m=1;
       k.KO(0,t,"ഊ");
+    }
+    else if(k.KKM(e,16384,220)&&k.KCM(1,t,"−",1)) {   // Line 66
+      r=m=1;
+      k.KO(1,t,"-");
     }
     else if(k.KKM(e,16384,65)&&k.KCM(1,t,"അ",1)) {   // Line 25
       r=m=1;

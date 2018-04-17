@@ -55,11 +55,18 @@ c malayalam avagraha
 'ഽ' + '/' > '//'
 
 c add dot reph
-'ർ' + '#' > 'ൎ' 
-c quotes
+'ർ' + '#' > 'ൎ'  
+
+c open & closed double quotes
     + '"' > '“'
 '“' + '"' >'”'
 '”' + '"' >'"'
+
+c hyphen
+'−' + '\' > '-'  
+
+
+
 
 
 
