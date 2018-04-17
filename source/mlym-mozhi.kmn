@@ -13,14 +13,14 @@ store(vowelsMlym)       'അആഇഈഉഊഋഎഏഒഓംഃ'
 c store(vowelMatrasMlym) 'ഽാിീുൂൃെേൊോംഃ'
 
 store(simpleConsKeyStrokes) 'kgjTdDpbyvzsh'
-store(simpleConsMlym) 'കഗജടദഡപബയവശസഹ'    
+store(simpleConsMlym) 'കഗജടദഡപബയവശസഹ'   
 
 store(unAspiratedConsMlym) 'കഗചജടദഡപബ'
 store(aspiratedConsMlym) 'ഖഘഛഝഠധഢഫഭ' 
 
 store(chilluKeyStrokes) 'NnrlLc'
 store(chilluMlym) 'ൺൻർൽൾൿ'
-store(chilluBase) 'ണനരലളക'
+store(chilluBase) 'ണനരലളക'  
 c store(irregularBase) '
 'അ' + 'a' > 'ആ'
 'അ' + 'i' > 'ഐ'
@@ -32,10 +32,13 @@ c store(irregularBase) '
 any(chilluMlym) + 'a' > index(chilluBase, 1)
 + any(vowelsKeyStrokes) > index(vowelsMlym, 1)  
 
-'ൻ' + 'g' > 'ങ്'
+
+'ൻ' + 'g' > 'ങ്' 
+c new1
 'ൿ' + 'h' > 'ച്' 
 'ച്' + 'h' > 'ഛ്' 
-'സ്' + 'h' > 'ഷ്'  
+'സ്' + 'h' > 'ഷ്' 
+'ൻൿ' + 'h' > 'ഞ്ച്'
 c 'a' will remove the 'chandrakkala' from the base consonant
 '്' + 'a' > nul
 
@@ -45,14 +48,22 @@ any(unAspiratedConsMlym) '്' + 'h' > index(aspiratedConsMlym, 1) "്"
 c mathematical symbols
 '\' + '*' > '×'   
 '\' + '/' > '÷' 
-'\' + '-' > '−'  
+'\' + '-' > '−' 
 
 c malayalam avagraha
 '/' + '/' > 'ഽ' 
 'ഽ' + '/' > '//'
 
 c add dot reph
-'ർ' + '#' > 'ൎ'
+'ർ' + '#' > 'ൎ' 
+c quotes
+    + '"' > '“'
+'“' + '"' >'”'
+'”' + '"' >'"'
+
+
+
+
 
 
 
