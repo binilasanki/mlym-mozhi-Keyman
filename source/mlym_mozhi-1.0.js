@@ -106,6 +106,10 @@ function Keyboard_mlym_mozhi()
       r=m=1;
       k.KO(1,t,"-");
     }
+    else if(k.KKM(e,16384,220)&&k.KCM(1,t,"×",1)) {   // Line 69
+      r=m=1;
+      k.KO(1,t,"*");
+    }
     else if(k.KKM(e,16384,65)&&k.KCM(1,t,"അ",1)) {   // Line 25
       r=m=1;
       k.KO(1,t,"ആ");
