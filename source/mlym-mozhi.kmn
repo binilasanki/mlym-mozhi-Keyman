@@ -5,7 +5,6 @@ store(&ETHNOLOGUECODE) 'mal'
 store(&WINDOWSLANGUAGES) 'x044C'
 begin Unicode > use(main)
 
-
 group(main) using keys                            
 
 store(vowelsKeyStrokes) 'aAiIuUReEoOmH'
@@ -13,14 +12,13 @@ store(vowelsMlym)       'അആഇഈഉഊഋഎഏഒഓംഃ'
 store(vowelsMatraKeyStrokes) 'AiIuUReEoOmH'
 store(vowelMatrasMlym) 'ാിീുൂൃെേൊോംഃ'
 
-store(simpleConsKeyStrokes) 'kgjTdDpbyvzsh'
-store(simpleConsMlym) 'കഗജടദഡപബയവശസഹ'   
+store(simpleConsKeyStrokes) 'kgjTdDpbyvzSsh'
+store(simpleConsMlym) 'കഗജടദഡപബയവശശസഹ'   
 
 store(unAspiratedConsMlym) 'കഗചജടതദഡപബ'
 store(aspiratedConsMlym) 'ഖഘഛഝഠഥധഢഫഭ' 
-store(fluidsMlym) 'യരറലളഴവശഷസഹ'
-store(consMlym) outs(unAspiratedConsMlym) outs(aspiratedConsMlym) outs(fluidsMlym)
-
+store(fluidsMlym) 'യരറലളഴവശഷസഹ'    
+store(consMlym) outs(unAspiratedConsMlym) outs(aspiratedConsMlym) outs(fluidsMlym) 'ങഞഩ'
 
 store(chilluKeyStrokes) 'NnrlLc'
 store(chilluMlym) 'ൺൻർൽൾൿ'
@@ -33,7 +31,7 @@ c irregular cases
 'അ' + 'i' > 'ഐ' 
 any(consMlym) + 'a' > index(consMlym, 1) 'ാ'
 any(consMlym) + 'i' > index(consMlym, 1) 'ൈ'
-any(consMlym) + 'u' > index(consMlym, 1) 'ൌ'
+any(consMlym) + 'u' > index(consMlym, 1) 'ൗ'
 
 'അ' + 'u' > 'ഔ'  
 'ഇ' + 'i' > 'ഈ'
@@ -46,9 +44,20 @@ any(consMlym) + 'u' > index(consMlym, 1) 'ൌ'
 'ർ' + 'r' > 'റ്'  
 'ൻ' + 'n' > 'ന്ന്'
 
-+ 't' > 'റ്റ'
-'റ്റ' + 'h' > 'ത്'
-+ 'x' > '്'
++ 't' > 'റ്റ്'
+'റ്റ്' + 'h' > 'ത്'
++ '~' > '്'     
+'ൿ' + 'h' > 'ച്'   
+'ശ്' + 'h' > 'ഴ്'
+'ൻ' + 'g' > 'ങ്'
+'ൺ' + 'g' > 'ങ്ങ്'
+'ൻ' + 'j' > 'ഞ്'
+'ൺ' + 'j' > 'ഞ്ഞ്'
+'മ' + 'a' > 'മാ'
+
+any(chilluExtended) + 'y' > index(chilluExtendedBase, 1) '്' 'യ' '്'  
+any(chilluExtended) + any(simpleConsKeyStrokes) > index(chilluExtendedBase, 1) '്' index(simpleConsMlym, 2) '്' 
+any(chilluExtended) + 't' > index(chilluExtendedBase, 1) '്റ്റ്'  
 
 + any(simpleConsKeyStrokes) > index(simpleConsMlym, 1) "്"
 + any(chilluKeyStrokes) > index(chilluMlym, 1)
@@ -56,7 +65,7 @@ any(consMlym) + 'u' > index(consMlym, 1) 'ൌ'
 
 c 'a' will remove the 'chandrakkala' from the base consonant
 '്' + 'a' > nul
-
+'്' + any(vowelsMatraKeyStrokes) > index(vowelMatrasMlym, 2)
 c chillu + vowelkeystroke > chillu base form + vowelmatra
 any(chilluExtended) + 'a' > index(chilluExtendedBase, 1)
 any(chilluExtended) +  any(vowelsMatraKeyStrokes) > index(chilluExtendedBase, 1) index(vowelMatrasMlym, 2)
@@ -98,4 +107,3 @@ c hyphen
 
 c asterisk
 '×' + '\' > '*' 
-
