@@ -10,37 +10,50 @@ group(main) using keys
 
 store(vowelsKeyStrokes) 'aAiIuUReEoOmH'
 store(vowelsMlym)       'അആഇഈഉഊഋഎഏഒഓംഃ'
-c store(vowelMatrasMlym) 'ഽാിീുൂൃെേൊോംഃ'
+store(vowelsMatraKeyStrokes) 'AiIuUReEoOmH'
+store(vowelMatrasMlym) 'ാിീുൂൃെേൊോംഃ'
 
 store(simpleConsKeyStrokes) 'kgjTdDpbyvzsh'
 store(simpleConsMlym) 'കഗജടദഡപബയവശസഹ'   
 
-store(unAspiratedConsMlym) 'കഗചജടദഡപബ'
-store(aspiratedConsMlym) 'ഖഘഛഝഠധഢഫഭ' 
+store(unAspiratedConsMlym) 'കഗചജടതദഡപബ'
+store(aspiratedConsMlym) 'ഖഘഛഝഠഥധഢഫഭ' 
+store(fluidsMlym) 'യരറലളഴവശഷസഹ'
 
 store(chilluKeyStrokes) 'NnrlLc'
 store(chilluMlym) 'ൺൻർൽൾൿ'
-store(chilluBase) 'ണനരലളക'  
-c store(irregularBase) '
+store(chilluBase) 'ണനരലളക'   
+store(chilluExtended) 'ംൺൻർൽൾൿ'   
+store(chilluExtendedBase) 'മണനരലളക'   
+
+c irregular cases
 'അ' + 'a' > 'ആ'
 'അ' + 'i' > 'ഐ'
 'അ' + 'u' > 'ഔ'
++ 't' > 'റ്റ'
+'റ്റ' + 'h' > 'ത്'
++ 'x' > '്'
 
 + any(simpleConsKeyStrokes) > index(simpleConsMlym, 1) "്"
 + any(chilluKeyStrokes) > index(chilluMlym, 1)
-
-any(chilluMlym) + 'a' > index(chilluBase, 1)
 + any(vowelsKeyStrokes) > index(vowelsMlym, 1)  
 
+c 'a' will remove the 'chandrakkala' from the base consonant
+'്' + 'a' > nul
+
+c chillu + vowelkeystroke > chillu base form + vowelmatra
+any(chilluExtended) + 'a' > index(chilluExtendedBase, 1)
+any(chilluExtended) +  any(vowelsKeyStrokes) > index(chilluExtendedBase, 1) index(vowelMatrasMlym, 2)
+any(unAspiratedConsMlym) '്' + any(vowelsMatraKeyStrokes) > index(unAspiratedConsMlym, 1) index(vowelMatrasMlym, 3)
+any(aspiratedConsMlym) '്' + any(vowelsMatraKeyStrokes) > index(aspiratedConsMlym, 1) index(vowelMatrasMlym, 3)
+any(fluidsMlym) '്' + any(vowelsMatraKeyStrokes) > index(fluidsMlym, 1) index(vowelMatrasMlym, 3)
 
 'ൻ' + 'g' > 'ങ്' 
 c new1
 'ൿ' + 'h' > 'ച്' 
 'ച്' + 'h' > 'ഛ്' 
 'സ്' + 'h' > 'ഷ്' 
-'ൻൿ' + 'h' > 'ഞ്ച്'
-c 'a' will remove the 'chandrakkala' from the base consonant
-'്' + 'a' > nul
+'ൻൿ' + 'h' > 'ഞ്ച്' 
 
 c unaspirated to aspirated
 any(unAspiratedConsMlym) '്' + 'h' > index(aspiratedConsMlym, 1) "്"  
@@ -69,15 +82,4 @@ c hyphen
 
 c asterisk
 '×' + '\' > '*' 
-
-
-
-
-
-
-
-
-
-
-
 
