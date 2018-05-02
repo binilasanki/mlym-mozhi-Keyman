@@ -19,6 +19,8 @@ store(simpleConsMlym) 'കഗജടദഡപബയവശസഹ'
 store(unAspiratedConsMlym) 'കഗചജടതദഡപബ'
 store(aspiratedConsMlym) 'ഖഘഛഝഠഥധഢഫഭ' 
 store(fluidsMlym) 'യരറലളഴവശഷസഹ'
+store(consMlym) outs(unAspiratedConsMlym) outs(aspiratedConsMlym) outs(fluidsMlym)
+
 
 store(chilluKeyStrokes) 'NnrlLc'
 store(chilluMlym) 'ൺൻർൽൾൿ'
@@ -28,8 +30,22 @@ store(chilluExtendedBase) 'മണനരലളക'
 
 c irregular cases
 'അ' + 'a' > 'ആ'
-'അ' + 'i' > 'ഐ'
-'അ' + 'u' > 'ഔ'
+'അ' + 'i' > 'ഐ' 
+any(consMlym) + 'a' > index(consMlym, 1) 'ാ'
+any(consMlym) + 'i' > index(consMlym, 1) 'ൈ'
+any(consMlym) + 'u' > index(consMlym, 1) 'ൌ'
+
+'അ' + 'u' > 'ഔ'  
+'ഇ' + 'i' > 'ഈ'
+'ി' + 'i' > 'ീ'
+'ഉ' + 'u' > 'ഊ'    
+'ു' + 'u' > 'ൂ'
+'ഒ' + 'o' > 'ഊ'
+'ൊ' + 'o' > 'ൂ'
+'ഋ' + 'R' > 'ൠ'      
+'ർ' + 'r' > 'റ്'  
+'ൻ' + 'n' > 'ന്ന്'
+
 + 't' > 'റ്റ'
 'റ്റ' + 'h' > 'ത്'
 + 'x' > '്'
@@ -43,7 +59,7 @@ c 'a' will remove the 'chandrakkala' from the base consonant
 
 c chillu + vowelkeystroke > chillu base form + vowelmatra
 any(chilluExtended) + 'a' > index(chilluExtendedBase, 1)
-any(chilluExtended) +  any(vowelsKeyStrokes) > index(chilluExtendedBase, 1) index(vowelMatrasMlym, 2)
+any(chilluExtended) +  any(vowelsMatraKeyStrokes) > index(chilluExtendedBase, 1) index(vowelMatrasMlym, 2)
 any(unAspiratedConsMlym) '്' + any(vowelsMatraKeyStrokes) > index(unAspiratedConsMlym, 1) index(vowelMatrasMlym, 3)
 any(aspiratedConsMlym) '്' + any(vowelsMatraKeyStrokes) > index(aspiratedConsMlym, 1) index(vowelMatrasMlym, 3)
 any(fluidsMlym) '്' + any(vowelsMatraKeyStrokes) > index(fluidsMlym, 1) index(vowelMatrasMlym, 3)
