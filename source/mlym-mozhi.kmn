@@ -26,7 +26,7 @@ store(chilluBase) 'ണനരലളക'
 store(chilluExtended) 'ംൺൻർൽൾൿ'   
 store(chilluExtendedBase) 'മണനരലളക'   
 
-c irregular cases
+c irregular caseschilluMlym
 'അ' + 'a' > 'ആ'
 'അ' + 'i' > 'ഐ' 
 any(consMlym) + 'a' > index(consMlym, 1) 'ാ'
@@ -44,6 +44,7 @@ any(consMlym) + 'u' > index(consMlym, 1) 'ൗ'
 'ർ' + 'r' > 'റ്'  
 'ൻ' + 'n' > 'ന്ന്'
 
++ 'm' > 'മ്'
 + 't' > 'റ്റ്'
 'റ്റ്' + 'h' > 'ത്'
 + '~' > '്'     
@@ -53,7 +54,8 @@ any(consMlym) + 'u' > index(consMlym, 1) 'ൗ'
 'ൺ' + 'g' > 'ങ്ങ്'
 'ൻ' + 'j' > 'ഞ്'
 'ൺ' + 'j' > 'ഞ്ഞ്'
-'മ' + 'a' > 'മാ'
+'മ' + 'a' > 'മാ' 
+ 
 
 any(chilluExtended) + 'y' > index(chilluExtendedBase, 1) '്' 'യ' '്'  
 any(chilluExtended) + any(simpleConsKeyStrokes) > index(chilluExtendedBase, 1) '്' index(simpleConsMlym, 2) '്' 
