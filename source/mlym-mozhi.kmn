@@ -1,27 +1,33 @@
-﻿store(&VERSION) '9.0'
+﻿c Originally created by Raj Neettiyath
+c Recreated for Keyman 10 by Junaid P. V.
+c Compiled for Keyman Keyboard by Binila Sanki
+store(&VERSION) '9.0'
 store(&TARGETS) 'any windows macosx linux web iphone ipad androidphone androidtablet mobile desktop tablet'
 store(&NAME) 'Malayalam Mozhi Keyboard'
 store(&ETHNOLOGUECODE) 'mal'
 store(&WINDOWSLANGUAGES) 'x044C'
+store(&COPYRIGHT) '© Raj Neettiyath'
+store(&MESSAGE) 'Mozhi Keyman Keyboard '
+store(&BITMAP) 'malayalam-mozhi.ico'
 begin Unicode > use(main)
 
 group(main) using keys                            
 
 store(vowelsKeyStrokes) 'aAiIuUReEoOmH'
 store(vowelsMlym)       'അആഇഈഉഊഋഎഏഒഓംഃ'
-store(vowelsMatraKeyStrokes) 'AiIuUReEoOmH'
-store(vowelMatrasMlym) 'ാിീുൂൃെേൊോംഃ'
+store(vowelsMatraKeyStrokes) 'AiIuUReEoOH'
+store(vowelMatrasMlym) 'ാിീുൂൃെേൊോഃ'
 
-store(simpleConsKeyStrokes) 'kgjTdDpbyvzSsh'
-store(simpleConsMlym) 'കഗജടദഡപബയവശശസഹ'   
+store(simpleConsKeyStrokes) 'kgjTdDpbmyvzSsh'
+store(simpleConsMlym) 'കഗജടദഡപബമയവശശസഹ'   
 
 store(unAspiratedConsMlym) 'കഗചജടതദഡപബ'
 store(aspiratedConsMlym) 'ഖഘഛഝഠഥധഢഫഭ' 
 store(fluidsMlym) 'യരറലളഴവശഷസഹ'    
 store(consMlym) outs(unAspiratedConsMlym) outs(aspiratedConsMlym) outs(fluidsMlym) 'ങഞഩ'
 
-store(chilluKeyStrokes) 'NnrlLc'
-store(chilluMlym) 'ൺൻർൽൾൿ'
+store(chilluKeyStrokes) 'NnrlLc'                 
+store(chilluMlym) 'ൺൻർൽൾൿ'    
 store(chilluBase) 'ണനരലളക'   
 store(chilluExtended) 'ംൺൻർൽൾൿ'   
 store(chilluExtendedBase) 'മണനരലളക'   
@@ -32,6 +38,11 @@ c irregular caseschilluMlym
 any(consMlym) + 'a' > index(consMlym, 1) 'ാ'
 any(consMlym) + 'i' > index(consMlym, 1) 'ൈ'
 any(consMlym) + 'u' > index(consMlym, 1) 'ൗ'
+any(consMlym) + 'm' > index(consMlym, 1) 'ം'
+c + 'm' > 'ം'
+c 'ം' + 'm' > 'മ്മ്'
+c 'ം' + 'r' > 'മ്ര്'
+c 'ം' + 'l' > 'മ്ല്'
 
 'അ' + 'u' > 'ഔ'  
 'ഇ' + 'i' > 'ഈ'
@@ -44,22 +55,23 @@ any(consMlym) + 'u' > index(consMlym, 1) 'ൗ'
 'ർ' + 'r' > 'റ്'  
 'ൻ' + 'n' > 'ന്ന്'
 
-+ 'm' > 'മ്'
+
 + 't' > 'റ്റ്'
 'റ്റ്' + 'h' > 'ത്'
 + '~' > '്'     
 'ൿ' + 'h' > 'ച്'   
 'ശ്' + 'h' > 'ഴ്'
-'ൻ' + 'g' > 'ങ്'
+'ൻ' + 'k' > 'ങ്ക്'
+'ൻ' + 'g' > 'ങ്' 
 'ൺ' + 'g' > 'ങ്ങ്'
-'ൻ' + 'j' > 'ഞ്'
+'ൻ' + 'j' > 'ഞ്' 
 'ൺ' + 'j' > 'ഞ്ഞ്'
-'മ' + 'a' > 'മാ' 
- 
-
+'ം' + 'a' > 'മ്' 
+                                                
 any(chilluExtended) + 'y' > index(chilluExtendedBase, 1) '്' 'യ' '്'  
 any(chilluExtended) + any(simpleConsKeyStrokes) > index(chilluExtendedBase, 1) '്' index(simpleConsMlym, 2) '്' 
 any(chilluExtended) + 't' > index(chilluExtendedBase, 1) '്റ്റ്'  
+any(chilluExtendedBase)  + any(fluidsMlym) > index(chilluExtendedBase, 1) '്' index(fluidsMlym, 1)
 
 + any(simpleConsKeyStrokes) > index(simpleConsMlym, 1) "്"
 + any(chilluKeyStrokes) > index(chilluMlym, 1)
@@ -69,18 +81,21 @@ c 'a' will remove the 'chandrakkala' from the base consonant
 '്' + 'a' > nul
 '്' + any(vowelsMatraKeyStrokes) > index(vowelMatrasMlym, 2)
 c chillu + vowelkeystroke > chillu base form + vowelmatra
-any(chilluExtended) + 'a' > index(chilluExtendedBase, 1)
+any(chilluExtended) + 'a' > index(chilluExtendedBase, 1) c '്' 
 any(chilluExtended) +  any(vowelsMatraKeyStrokes) > index(chilluExtendedBase, 1) index(vowelMatrasMlym, 2)
 any(unAspiratedConsMlym) '്' + any(vowelsMatraKeyStrokes) > index(unAspiratedConsMlym, 1) index(vowelMatrasMlym, 3)
 any(aspiratedConsMlym) '്' + any(vowelsMatraKeyStrokes) > index(aspiratedConsMlym, 1) index(vowelMatrasMlym, 3)
 any(fluidsMlym) '്' + any(vowelsMatraKeyStrokes) > index(fluidsMlym, 1) index(vowelMatrasMlym, 3)
 
-'ൻ' + 'g' > 'ങ്' 
 c new1
 'ൿ' + 'h' > 'ച്' 
 'ച്' + 'h' > 'ഛ്' 
 'സ്' + 'h' > 'ഷ്' 
-'ൻൿ' + 'h' > 'ഞ്ച്' 
+'ൻൿ' + 'h' > 'ഞ്ച്'    
+'ത്' + 'h' > 'ഥ്'
+
+ 
+
 
 c unaspirated to aspirated
 any(unAspiratedConsMlym) '്' + 'h' > index(aspiratedConsMlym, 1) "്"  
